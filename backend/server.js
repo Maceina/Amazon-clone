@@ -1,13 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 import productRouter from "./routers/productRouter.js";
 import userRouter from "./routers/userRouter.js";
-import orderRouter from './routers/orderRouter.js';
+import orderRouter from "./routers/orderRouter.js";
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/amazon", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -16,7 +16,10 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/amazon", {
 
 app.use("/api/users/", userRouter);
 app.use("/api/products", productRouter);
-app.use('/api/orders', orderRouter);
+app.use("/api/orders", orderRouter);
+app.get("/api/config/paypal", (req, res) => {
+  res.send(process.env.PAYPAL_CLIENTID || "sb");
+});
 app.get("/", (req, res) => {
   res.send("Server is ready");
 });
