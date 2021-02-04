@@ -2,6 +2,10 @@
 
 # Live: 
 
+# Demo account:
+1. Email address: admin@example.com
+2. Password: 1234
+
 # Backend:
 1. Node.js
 2. Express.js
