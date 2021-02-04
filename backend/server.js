@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //moved from localhost to cloud
-mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/amazon", {
+mongoose.connect(process.env.MONGODB_URL || "mongodb+srv://admin:7Vpc4bRTcaspmirK@cluster0.zrlyb.mongodb.net/amazon?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
