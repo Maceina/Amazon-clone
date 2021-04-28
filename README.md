@@ -1,5 +1,3 @@
-# Amazon clone
-
 # Showcase:
  ![Alt text](/images/1.png?raw=true "Title")
  ![Alt text](/images/2.png?raw=true "Title")
@@ -9,6 +7,9 @@
  ![Alt text](/images/6.png?raw=true "Title")
  ![Alt text](/images/7.png?raw=true "Title")
  ![Alt text](/images/8.png?raw=true "Title")
+ 
+ # Amazon clone
+
 
 # Demo account:
 1. Email address: admin@example.com
